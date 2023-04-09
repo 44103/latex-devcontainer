@@ -8,5 +8,6 @@ services:
       - ~/.gitconfig:/root/.gitconfig:ro
       - ./.latexmkrc:/root/.latexmkrc
       - ./.vscode:/workdir/.vscode
+      - ./.gitignore:/workdir/.gitignore
     environment:
       SHELL: "/bin/zsh"
