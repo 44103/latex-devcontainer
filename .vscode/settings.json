@@ -1,8 +1,11 @@
 {
+  "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや",
+  "files.associations": {
+    "*.cls": "latex"
+  },
   "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
   "latex-workshop.latex.autoBuild.run": "onFileChange",
   "latex-workshop.latex.autoClean.run": "onSucceeded",
-  "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや",
   "latex-workshop.latex.tools": [
     {
       "name": "Latexmk (upLaTeX)",
@@ -31,20 +34,60 @@
         "%DOC%"
       ]
     },
-  ],
-  "latex-workshop.latex.recipes": [
     {
-      "name": "upLaTeX",
-      "tools": [
-        "Latexmk (upLaTeX)"
+      "name": "uplatex",
+      "command": "uplatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-jobname=\"%DOCFILE%\"",
+        "-kanji=utf8",
+        "-guess-input-enc",
+        "%DOCFILE%.tex"
       ]
     },
+    {
+      "name": "pbibtex",
+      "command": "pbibtex",
+      "args": [
+        "%DOCFILE%",
+        "-kanji=utf8"
+      ],
+    },
+    {
+      "name": "dvipdfmx",
+      "command": "dvipdfmx",
+      "args": [
+        // "-f",
+        // "haranoaji.map",
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    // {
+    //   "name": "upLaTeX",
+    //   "tools": [
+    //     "Latexmk (upLaTeX)"
+    //   ]
+    // },
     // {
     //   "name": "pLaTeX",
     //   "tools": [
     //     "Latexmk (pLaTeX)"
     //   ]
     // },
+    {
+      "name": "uplatex default",
+      "tools": [
+        // "uplatex",
+        // "pbibtex",
+        "uplatex",
+        "uplatex",
+        "dvipdfmx"
+      ]
+    }
   ],
   "latex-workshop.latex.magic.args": [
     "-f",
@@ -84,4 +127,8 @@
     "*.vrb",
   ],
   "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  }
 }
