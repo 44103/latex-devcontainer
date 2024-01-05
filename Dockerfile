@@ -20,7 +20,7 @@ RUN export DEBIAN_FRONTEND="noninteractive" && \
     texlive-fonts-recommended \
     texlive-fonts-extra \
     texlive-luatex \
-    latexmk \
+    chktex \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

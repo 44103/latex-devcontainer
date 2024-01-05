@@ -5,9 +5,9 @@ services:
     command: sleep infinity
     volumes:
       - ../:/workdir
-      - ~/.gitconfig:/root/.gitconfig:ro
       - ./.latexmkrc:/root/.latexmkrc
       - ./.vscode:/workdir/.vscode
       - ./.gitignore:/workdir/.gitignore
+      - ~/.zhistory:/root/.zsh_history
     environment:
       SHELL: "/bin/zsh"
