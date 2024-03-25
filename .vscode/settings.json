@@ -130,5 +130,23 @@
   "latex-workshop.synctex.afterBuild.enabled": true,
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"
-  }
+  },
+  "cSpell.ignorePaths": [
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".devcontainer",
+  ],
+  "cSpell.words": [
+    "halign",
+    "hlines",
+    "JDLA",
+    "leftsep",
+    "LPIC",
+    "rightsep",
+    "Timestream",
+    "Vertica",
+    "vlines",
+    "AMBL"
+  ]
 }

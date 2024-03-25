@@ -14,7 +14,8 @@
         "patbenatar.advanced-new-file",
         "sleistner.vscode-fileutils",
         "mhutchie.git-graph",
-        "ms-vscode.makefile-tools"
+        "ms-vscode.makefile-tools",
+        "streetsidesoftware.code-spell-checker"
       ]
     }
   },
