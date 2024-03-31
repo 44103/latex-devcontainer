@@ -136,17 +136,5 @@
     ".git/objects",
     ".vscode",
     ".devcontainer",
-  ],
-  "cSpell.words": [
-    "halign",
-    "hlines",
-    "JDLA",
-    "leftsep",
-    "LPIC",
-    "rightsep",
-    "Timestream",
-    "Vertica",
-    "vlines",
-    "AMBL"
   ]
 }
